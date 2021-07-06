@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://play-solitaire-cruise.com/loader/offer/wall.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Check out these games!</title>
+<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+body {
+    font-family: Avenir, 'Avenir Next', Helvetica, sans-serif;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+#loader-wrap {
+    animation: loader-wrap-anim 3s linear 1;
+    animation-fill-mode: forwards;
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: calc(50vh - 45px);
+    width: 100%;
+    max-width: 320px;
+}
+#dot-open {
+    animation: dot-open-anim 1.5s linear infinite;
+    transform-origin: 50% 50%;
+    position: absolute;
+    left: 20%;
+    width: 36px;
+    z-index: 10;
+}
+#dot-solid {
+    animation: dot-solid-anim 1.5s linear infinite;
+    transform-origin: 50% 50%;
+    position: absolute;
+    right: 20%;
+    width: 36px;
+    z-index: 10;
+}
+@keyframes loader-wrap-anim {
+0% {
+opacity:1;
+}
+99% {
+opacity:1;
+}
+100% {
+opacity:0;
+}
+}
+@keyframes offer-wall-anim {
+0% {
+opacity:0;
+    max-height:0;
+}
+99% {
+opacity:0;
+    max-height:0;
+}
+100% {
+opacity:1;
+    max-height:9999px;
+}
+}
+@keyframes dot-open-anim {
+0% {
+transform: scale(1);
+left: 20%;
+}
+5% {
+transform: scale(1);
+left: 20%;
+}
+25% {
+transform: scale(2.5);
+left: 45%;
+z-index: 100;
+}
+45% {
+transform: scale(1);
+left: 70%;
+}
+55% {
+transform: scale(1);
+left: 70%;
+}
+75% {
+transform: scale(0.5);
+left: 45%;
+z-index: 10;
+}
+95% {
+transform: scale(1);
+left: 20%;
+}
+100% {
+transform: scale(1);
+left: 20%;
+}
+}
+@keyframes dot-solid-anim {
+0% {
+transform: scale(1);
+right: 20%;
+}
+5% {
+transform: scale(1);
+right: 20%;
+}
+25% {
+transform: scale(0.5);
+right: 45%;
+z-index: 10;
+}
+45% {
+transform: scale(1);
+right: 70%;
+}
+55% {
+transform: scale(1);
+right: 70%;
+}
+75% {
+transform: scale(2.5);
+right: 45%;
+z-index: 100;
+}
+95% {
+transform: scale(1);
+right: 20%;
+}
+100% {
+transform: scale(1);
+right: 20%;
+}
+}
+#offer-wall {
+    animation: offer-wall-anim 3s linear 1;
+    position: absolute;
+    width:calc(100% - 20px);
+    max-width:800px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    text-align: center;
+    z-index: 200;
+    overflow:hidden;
+}
+.offer-pod {
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin-bottom:10px;
+}
+.offer-pod:last-child {
+    margin-bottom:60px;
+}
+.app-banner {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.app-info {
+    display: flex;
+    align-items: center;
+}
+.app-icon-cell {
+    flex: 0 0 50px;
+}
+.app-icon {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+    border-radius: 25%;
+}
+.app-details {
+    flex: 1 1 100%;
+    text-align: left;
+    padding: 0 10px 0;
+}
+.app-button {
+    height: 36px;
+    line-height:38px;
+    margin: 0;
+    padding:0 1em;
+    display: block;
+    background: #15afb1;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 18px;
+    border: 0;
+    font-size: 18px;
+    text-decoration: none;
+}
+h1 {
+    font-size: 21px;
+    color: #999;
+    margin: 1em auto;
+    font-weight: 500;
+}
+h2 {
+    font-size: 16px;
+    line-height:1em;
+    color: #000;
+    margin: 0 auto 0.2em;
+    font-weight: 500;
+}
+p {
+    font-size: 11px;
+    line-height:11px;
+    color: #999;
+    margin: 0.2em auto 0;
+}
+.app-ratings {
+	display:flex;
+	align-items:flex-start;
+}
+.stars {
+	height:10px;
+	width:auto;
+	margin:0 5px;
+	opacity:0.6;
+	position:relative;
+	top:-1px;
+}
+.app-ratings .em {
+	line-height:10px;
+}
+</style>
+</head>
+<body>
+<script charset="utf-8" type="text/javascript">
+	// function to get params from URL string		
+	function getUrlVars(src) 
+	{
+		var vars = {};
+		var parts = src.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+		  vars[key] = value;
+		});
+		
+		return vars;
+	}
+
+	// assign primary tracking parameters		
+	p0 = decodeURIComponent(getUrlVars(window.location.href)["p0"]);	// adjust.token
+	p1 = decodeURIComponent(getUrlVars(window.location.href)["p1"]);	// campaign.name
+	p2 = decodeURIComponent(getUrlVars(window.location.href)["p2"]);	// campaign.id
+	p3 = decodeURIComponent(getUrlVars(window.location.href)["p3"]);	// adset.name 
+	p4 = decodeURIComponent(getUrlVars(window.location.href)["p4"]);	// adset.id
+	p5 = decodeURIComponent(getUrlVars(window.location.href)["p5"]);	// ad.name
+	p6 = decodeURIComponent(getUrlVars(window.location.href)["p6"]);	// ad.id
+	
+	// assign offerwall game codes (based on internal game shortcodes)
+	//
+	// the first game listed (g1) should match the primary campaign/target game; this is used for attribution on individual game pods below
+	g1 = decodeURIComponent(getUrlVars(window.location.href)["g1"]);	// must have at least 1 game available
+	g2 = decodeURIComponent(getUrlVars(window.location.href)["g2"]);
+	g3 = decodeURIComponent(getUrlVars(window.location.href)["g3"]);
+	g4 = decodeURIComponent(getUrlVars(window.location.href)["g4"]);
+	g5 = decodeURIComponent(getUrlVars(window.location.href)["g5"]);
+	g6 = decodeURIComponent(getUrlVars(window.location.href)["g6"]);
+	g7 = decodeURIComponent(getUrlVars(window.location.href)["g7"]);
+	g8 = decodeURIComponent(getUrlVars(window.location.href)["g8"]);
+	g9 = decodeURIComponent(getUrlVars(window.location.href)["g9"]);
+	g10 = decodeURIComponent(getUrlVars(window.location.href)["g10"]);
+	g11 = decodeURIComponent(getUrlVars(window.location.href)["g11"]);
+	g12 = decodeURIComponent(getUrlVars(window.location.href)["g12"]);
+	g13 = decodeURIComponent(getUrlVars(window.location.href)["g13"]);
+	g14 = decodeURIComponent(getUrlVars(window.location.href)["g14"]);
+	g15 = decodeURIComponent(getUrlVars(window.location.href)["g15"]);
+	g16 = decodeURIComponent(getUrlVars(window.location.href)["g16"]);
+	g17 = decodeURIComponent(getUrlVars(window.location.href)["g17"]);
+	g18 = decodeURIComponent(getUrlVars(window.location.href)["g18"]);
+	g19 = decodeURIComponent(getUrlVars(window.location.href)["g19"]);
+	g20 = decodeURIComponent(getUrlVars(window.location.href)["g20"]);
+	g21 = decodeURIComponent(getUrlVars(window.location.href)["g21"]);
+	
+	// assign secondary tracking parameters (applies only to offer wall games)
+	c2 = decodeURIComponent(getUrlVars(window.location.href)["g1"]);	// campaign [shares same param/input as g1]
+	c1 = decodeURIComponent(getUrlVars(window.location.href)["c1"]);	// adgroup_name
+	
+	// assign fbclid (automatically appended on FB visits)
+	fbclid = decodeURIComponent(getUrlVars(window.location.href)["fbclid"]);
+	
+
+		
+	// construct primary click URL (also used for redirect)
+	var clickurl = "https://app.adjust.com/" + p0 + "?campaign=" + p1 + "%20%28" + p2 + "%29&adgroup=" + p3 + "%20%28" + p4 + "%29&creative=" + p5 + "%20%28" + p6 + "%29&fbclid=" + fbclid;
+
+
+	// game vars lookup table
+	//
+	// * all custom vars should begin with internal game shortcode (e.g. 'abc_title', 'abc_url', etc.)
+	// * assign all 5 values (title, url, text, stars, ratings) as shown below
+	
+	// Ancient Battle
+	var anc_title = 'Ancient Battle';
+	var anc_url = 'https://app.adjust.com/muqof6m';
+	var anc_text = 'Do you have what it takes to lead the troops into battle and become victorious??';
+	var anc_stars = '4.7';
+	var anc_ratings = '14.2k';
+
+	// Animal Transform
+	var ant_title = 'Animal Transform:Epic Race 3D';
+	var ant_url = 'https://app.adjust.com/ukxj7fk';
+	var ant_text = 'Switch the Animal to be Winner';
+	var ant_stars = '4.1';
+	var ant_ratings = '1.1M';	
+
+	// Base Attack
+	var dmb_title = 'Base Attack';
+	var dmb_url = 'https://app.adjust.com/nrbi5k6';
+	var dmb_text = 'Can you destroy them all?';
+	var dmb_stars = '3';
+	var dmb_ratings = '1k';
+
+	// Bermuda Adventures
+	var bf_title = 'Bermuda Adventures';
+	var bf_url = 'https://app.adjust.com/8a3kkjr';
+	var bf_text = 'Raise animals, harvest crops, craft new recipes and trade with your friends!';
+	var bf_stars = '4';
+	var bf_ratings = '940';
+
+	// Bingo Story Live Bingo Games
+	var bs_title = 'Bingo Story Live Bingo Games';
+	var bs_url = 'https://app.adjust.com/c91530n';
+	var bs_text = 'Fun &amp; free bingo game with a fairy tale twist!';
+	var bs_stars = '4.6';
+	var bs_ratings = '12.3k';
+
+	// Block Puzzle 100
+	var bp100_title = 'Block Puzzle 100';
+	var bp100_url = 'https://app.adjust.com/a9cjvwq';
+	var bp100_text = 'High-quality puzzle game enjoyed by users worldwide!';
+	var bp100_stars = '4.7';
+	var bp100_ratings = '939';
+
+	// Block Puzzle - Woody 99 2020 
+	var w99_title = 'Block Puzzle - Woody 99 2020';
+	var w99_url = 'https://app.adjust.com/kf6abha';
+	var w99_text = 'Beautiful and relaxing block puzzles!';
+	var w99_stars = '4.5';
+	var w99_ratings = '14k';
+
+	// Blockscapes - Block Puzzle 
+	var bl_title = 'Blockscapes - Block Puzzle';
+	var bl_url = 'https://app.adjust.com/q2qek1i';
+	var bl_text = 'Beautiful and relaxing block puzzles!';
+	var bl_stars = '4.6';
+	var bl_ratings = '18k';
+
+	// Bricks n Balls 
+	var bnb_title = 'Bricks n Balls';
+	var bnb_url = 'https://app.adjust.com/pzjtrw1';
+	var bnb_text = 'Satisfying &amp; challenging brick busting game';
+	var bnb_stars = '4.3';
+	var bnb_ratings = '70k';
+
+	// Car Safety Check
+	var csc_title = 'Car Safety Check';
+	var csc_url = 'https://app.adjust.com/xd4vi5d';
+	var csc_text = 'Build a car, slingshot, and smash it!';
+	var csc_stars = '4';
+	var csc_ratings = '1.5k';
+
+	// Cash Tornado Slots Casino
+	var ct_title = 'Cash Tornado Slots';
+	var ct_url = 'https://app.adjust.com/j24oqyj';
+	var ct_text = 'Spin away to marvel in huge winnings beyond your wildest imagination!';
+	var ct_stars = '4.8';
+	var ct_ratings = '33.6k';
+
+	// Cats & Dogs 3D
+	var cnd_title = 'Cats & Dogs 3D';
+	var cnd_url = 'https://app.adjust.com/txeo9s9';
+	var cnd_text = 'Solve fun challenges with a magical creature with both cat and dog heads!';
+	var cnd_stars = '4.6';
+	var cnd_ratings = '1.7k';
+
+	// Clockmaker: Match Three Games 
+	var cm_title = 'Clockmaker: Match Three Games';
+	var cm_url = 'https://app.adjust.com/lqyzi19';
+	var cm_text = 'Embark upon a mystical puzzle adventure!';
+	var cm_stars = '4';
+	var cm_ratings = '80k';
+
+	// Clue Hunter
+	var clu_title = 'Clue Hunter';
+	var clu_url = 'https://app.adjust.com/3bo4yhz';
+	var clu_text = 'Are you detective enough?';
+	var clu_stars = '4';
+	var clu_ratings = '13k';
+
+	// Color Island
+	var ci_title = 'Color Island';
+	var ci_url = 'https://app.adjust.com/rz0bmwo';
+	var ci_text = 'Relaxing coloring app to boost mindfulness and reduce stress.';
+	var ci_stars = '4.6';
+	var ci_ratings = '1.3k';
+
+	// Coin trip
+	var coi_title = 'Coin Trip';
+	var coi_url = 'https://app.adjust.com/hixxl87';
+	var coi_text = 'Build your destinations and complete against your friends!';
+	var coi_stars = '4.7';
+	var coi_ratings = '9.7k';
+
+	// Cooking Madness - Kitchen Frenzy 
+	var ckm_title = 'Cooking Madness - Kitchen Frenzy';
+	var ckm_url = 'https://app.adjust.com/yzdpsq0';
+	var ckm_text = 'Become the chef you always wanted to be!';
+	var ckm_stars = '4.5';
+	var ckm_ratings = '207k';
+
+	// Death Incoming
+	var dec_title = 'Death Incoming';
+	var dec_url = 'https://app.adjust.com/df08vhi';
+	var dec_text = 'Harvest Souls with deadly puzzles!';
+	var dec_stars = '4.6';
+	var dec_ratings = '47k';
+
+	// Dingbats
+	var dng_title = 'Dingbats';
+	var dng_url = 'https://app.adjust.com/zwjl8og';
+	var dng_text = 'Fun and unique word puzzle challenges!';
+	var dng_stars = '4.8';
+	var dng_ratings = '17k';
+	
+	// Final Fantasy XV
+	var ffxv_title = 'Final Fantasy XV: A New Empire';
+	var ffxv_url = 'https://app.adjust.com/an3jytz';
+	var ffxv_text = 'Lead your forces to victory and dominate the Realm!';
+	var ffxv_stars = '4';
+	var ffxv_ratings = '39.8k';
+
+	// Firestrike Tactics
+	var fs_title = 'Firestrike Tactics';
+	var fs_url = 'https://app.adjust.com/wss7ppc';
+	var fs_text = 'An epic sci-fi war strategy game with a real-time battlefield.';
+	var fs_stars = '4.5';
+	var fs_ratings = '1k';
+
+	// Funky Bay – Farm &amp; Adventure 
+	var fe_title = 'Funky Bay - Farm &amp; Adventure';
+	var fe_url = 'https://app.adjust.com/zws3r8v';
+	var fe_text = 'Explore new lands, mine resources, solve quests';
+	var fe_stars = '4.5';
+	var fe_ratings = '19k';
+
+	// Gas Station Inc.
+	var hgs_title = 'Gas Station Inc.';
+	var hgs_url = 'https://app.adjust.com/5ik0zzh';
+	var hgs_text = 'Gas Attendant Simulator';
+	var hgs_stars = '4.6';
+	var hgs_ratings = '6k';
+
+	// Girl Genius
+	var gir_title = 'Girl Genius';
+	var gir_url = 'https://app.adjust.com/g9z786o';
+	var gir_text = 'Addictive and hilarious brain teasers!';
+	var gir_stars = '4';
+	var gir_ratings = '4k';
+	
+	// Happy Glass
+	var hap_title = 'Happy Glass';
+	var hap_url = 'https://app.adjust.com/44r5nib';
+	var hap_text = 'Simple, smart and fun water puzzles!';
+	var hap_stars = '4.3';
+	var hap_ratings = '93k';
+
+	// Heroes Inc
+	var lab_title = 'Heroes Inc';
+	var lab_url = 'https://app.adjust.com/ngb689y';
+	var lab_text = 'Craft the greatest Heroes in history and save the world!';
+	var lab_stars = '4.7';
+	var lab_ratings = '29.4k';
+
+	// Holdem Foldem
+	var hf_title = 'Holdem Foldem';
+	var hf_url = 'https://app.adjust.com/quri3u3';
+	var hf_text = 'Hold\'em or Fold\'em, that is the question: a game of intelligence, courage, and luck!';
+	var hf_stars = '4.5';
+	var hf_ratings = '8.1k';
+
+	// Hooked Inc
+	var hkd_title = 'Hooked Inc';
+	var hkd_url = 'https://app.adjust.com/1446utj';
+	var hkd_text = 'Master the sea, show off your boat, catch the Big One and become a fishing legend!';
+	var hkd_stars = '4.7';
+	var hkd_ratings = '372.1k';
+
+	// Ice Man 3D
+	var icm_title = 'Ice Man 3D';
+	var icm_url = 'https://app.adjust.com/hkwp3f2';
+	var icm_text = 'Freeze your enemies and shatter them to bits!';
+	var icm_stars = '4';
+	var icm_ratings = '1k';
+
+	// Icing on the Dress
+	var icd_title = 'Icing on the Dress';
+	var icd_url = 'https://app.adjust.com/ue374bl';
+	var icd_text = 'Relax and create beautiful dress cakes!';
+	var icd_stars = '4';
+	var icd_ratings = '3k';
+
+	// Island King Saga
+	var ik_title = 'Island King Saga';
+	var ik_url = 'https://app.adjust.com/w8d5i52';
+	var ik_text = 'Help Luna find her father on this Island Adventure!';
+	var ik_stars = '4.8';
+	var ik_ratings = '12.2k';
+
+	// Kryss - The Battle of Words
+	var ks_title = 'Kryss - The Battle of Words';
+	var ks_url = 'https://app.adjust.com/9f76ha6';
+	var ks_text = 'Test your vocabulary and imagination in this turn-based word game!';
+	var ks_stars = '4.4';
+	var ks_ratings = '3k';
+	
+	// Life Simulator: Best Life
+	var ls2_title = 'Life Simulator: Best Life';
+	var ls2_url = 'https://app.adjust.com/5ik0zzh';
+	var ls2_text = 'Live your best life!';
+	var ls2_stars = '4.4';
+	var ls2_ratings = '175k';
+
+	// Matchington Mansion
+	var mm_title = 'Matchington Mansion';
+	var mm_url = 'https://app.adjust.com/w513y0i';
+	var mm_text = 'Decorate your mansion with a match-3 makeover puzzle game!';
+	var mm_stars = '4.5';
+	var mm_ratings = '272k';
+
+	// Merge Life
+	var mli_title = 'Merge Life';
+	var mli_url = 'https://app.adjust.com/3ab4qdj';
+	var mli_text = 'Merge your way to retirement';
+	var mli_stars = '4.7';
+	var mli_ratings = '1k';
+	
+	// Merge Villa
+	var mvi_title = 'Merge Villa';
+	var mvi_url = 'https://app.adjust.com/2qa4h9x';
+	var mvi_text = 'Help Alice renovate her grandparents mansion!';
+	var mvi_stars = '4.6';
+	var mvi_ratings = '3k';
+
+	// Mr Bullet
+	var mrb_title = 'Mr Bullet';
+	var mrb_url = 'https://app.adjust.com/8pdpmu3';
+	var mrb_text = 'Use precise aim and laser focus to take down enemies!';
+	var mrb_stars = '4.5';
+	var mrb_ratings = '113k';
+
+	// My Home - Design Dreams 
+	var mh_title = 'My Home - Design Dreams';
+	var mh_url = 'https://app.adjust.com/csd6t07';
+	var mh_text = 'Show your skills at decorating houses!';
+	var mh_stars = '4.5';
+	var mh_ratings = '140k';
+
+	// My Story - Mansion Makeover 
+	var ms_title = 'My Story - Mansion Makeover';
+	var ms_url = 'https://app.adjust.com/6emrpjr';
+	var ms_text = 'Embark on an exciting adventure and protect your mansion!';
+	var ms_stars = '4.8';
+	var ms_ratings = '11k';
+
+	// Nail Salon 3D
+	var nsn_title = 'Nail Salon 3D';
+	var nsn_url = 'https://app.adjust.com/i7xc26k';
+	var nsn_text = 'Scrape, clip, paint, polish and perfect your client\'s nails';
+	var nsn_stars = '4';
+	var nsn_ratings = '6k';
+
+	// Pawn Shop Master
+	var pwn_title = 'Pawn Shop Master';
+	var pwn_url = 'https://app.adjust.com/fqbfw9s';
+	var pwn_text = 'Run your very own shop and strike deals with customers!';
+	var pwn_stars = '4.5';
+	var pwn_ratings = '24k';
+
+	// Perfect Date 3D
+	var kis_title = 'Perfect Date 3D';
+	var kis_url = 'https://app.adjust.com/m6ays39';
+	var kis_text = 'Take your relationship to the next level!';
+	var kis_stars = '4';
+	var kis_ratings = '2k';
+
+	// Prank Master 3D
+	var prk_title = 'Prank Master 3D';
+	var prk_url = 'https://app.adjust.com/fddi1zg';
+	var prk_text = 'Become a pranking genius!';
+	var prk_stars = '4';
+	var prk_ratings = '7k';
+
+	// Project Makeover
+	var pm_title = 'Project Makeover';
+	var pm_url = 'https://app.adjust.com/z3esxdv';
+	var pm_text = 'Give desperately needed makeovers!';
+	var pm_stars = '4.5';
+	var pm_ratings = '207.1k';
+
+	// Pro des Mots
+	var wcfr_title = 'Pro des Mots';
+	var wcfr_url = 'https://app.adjust.com/w53v904';
+	var wcfr_text = 'Vous aimez mettre votre sens de la logique et votre vocabulaire à l\'épreuve?';
+	var wcfr_stars = '4.5';
+	var wcfr_ratings = '321k';
+	
+	// Pull Him Out
+	var pul_title = 'Pull Him Out';
+	var pul_url = 'https://app.adjust.com/tax9le8';
+	var pul_text = 'Simple and addiciting pin puzzles!';
+	var pul_stars = '4.3';
+	var pul_ratings = '128k';
+
+	// Real Time Shields
+	var rts_title = 'Real Time Shields';
+	var rts_url = 'https://app.adjust.com/prynq84';
+	var rts_text = 'Draw your formations to protect your base!';
+	var rts_stars = '4.6';
+	var rts_ratings = '15.8k';
+
+	// Save the Girl
+	var stg_title = 'Save the Girl';
+	var stg_url = 'https://app.adjust.com/ja1fzye';
+	var stg_text = 'Solve brain teasers to protect the girl!';
+	var stg_stars = '4.4';
+	var stg_ratings = '269k';
+
+	// Silhouette Art
+	var sil_title = 'Silhouette Art';
+	var sil_url = 'https://app.adjust.com/jygue6b';
+	var sil_text = 'Digital Art has never looked this good!';
+	var sil_stars = '4.7';
+	var sil_ratings = '22.4k';
+
+	// Smashing Four
+	var s4_title = 'Smashing Four: PVP Smash Hit!';
+	var s4_url = 'https://app.adjust.com/8gym75u';
+	var s4_text = 'Enter the Arena and get ready to fight fierce 1v1 battles!';
+	var s4_stars = '4.7';
+	var s4_ratings = '15.3k';
+
+	// Solitaire Buddies
+	var sb_title = 'Solitaire Buddies';
+	var sb_url = 'https://app.adjust.com/anymr7d';
+	var sb_text = 'Play solitaire with tons of fun challenging levels!';
+	var sb_stars = '4.8';
+	var sb_ratings = '1.3k';
+
+	// Solitaire Cruise Tripeaks Card
+	var sc_title = 'Solitaire Cruise Tripeaks Card';
+	var sc_url = 'https://app.adjust.com/dtzrn5l';
+	var sc_text = 'Train your brain &amp; patience with solitaire!';
+	var sc_stars = '4.7';
+	var sc_ratings = '58k';
+
+	// Solitaire Garden Escapes
+	var sge_title = 'Solitaire Garden Escapes';
+	var sge_url = 'https://app.adjust.com/wbyy348';
+	var sge_text = 'Build your own zen garden!';
+	var sge_stars = '4.8';
+	var sge_ratings = '3k';
+
+	// Stairway to Heaven
+	var str_title = 'Stairway to Heaven';
+	var str_url = 'https://app.adjust.com/rrjb4xf';
+	var str_text = 'Make the right choices to reach heaven!';
+	var str_stars = '4.1';
+	var str_ratings = '18.7k';
+
+	// Street Hustle
+	var sth_title = 'Street Hustle';
+	var sth_url = 'https://app.adjust.com/khzsk4d';
+	var sth_text = 'Make decisions to help save the homeless';
+	var sth_stars = '4.6';
+	var sth_ratings = '23k';
+
+	// Survival Master
+	var sur_title = 'Survival Master';
+	var sur_url = 'https://app.adjust.com/e0teblb';
+	var sur_text = 'Survive on a deserted island!';
+	var sur_stars = '4.5';
+	var sur_ratings = '10.7k';
+
+	// Sweet Escapes: Build A Bakery
+	var se_title = 'Sweet Escapes: Build A Bakery';
+	var se_url = 'https://app.adjust.com/99oi9o7';
+	var se_text = 'Build a delicious world with matching puzzle games!';
+	var se_stars = '4.6';
+	var se_ratings = '2.6k';
+
+	// The Superhero League
+	var tsl_title = 'The Superhero League';
+	var tsl_url = 'https://app.adjust.com/a8ovl93';
+	var tsl_text = 'Use your superpowers!';
+	var tsl_stars = '4.8';
+	var tsl_ratings = '512k';
+
+	// Web Crawler
+	var kid_title = 'Web Crawler';
+	var kid_url = 'https://app.adjust.com/tbfhbo0';
+	var kid_text = 'Jump, Climb and Solve puzzles';
+	var kid_stars = '4.5';
+	var kid_ratings = '1k';
+
+	// Woody Block Puzzle Brain Game 
+	var wbp_title = 'Woody Block Puzzle Brain Game';
+	var wbp_url = 'https://app.adjust.com/i1qk3o3';
+	var wbp_text = 'Play with friends in this artisan relaxing block puzzle game!';
+	var wbp_stars = '4.5';
+	var wbp_ratings = '123k';
+
+	// Woody Dice Merge Puzzle
+	var wdm_title = 'Woody Dice Merge Puzzle';
+	var wdm_url = 'https://app.adjust.com/8uylgvy';
+	var wdm_text = 'Dominos and block puzzle collide in this enticing new game!';
+	var wdm_stars = '4.8';
+	var wdm_ratings = '1k';
+
+	// Word Connect
+	var wc_title = 'Word Connect';
+	var wc_url = 'https://app.adjust.com/lesy1e5';
+	var wc_text = 'Train your brain and become a word master!';
+	var wc_stars = '4.5';
+	var wc_ratings = '321k';
+
+	// West Game
+	var wg_title = 'West Game';
+	var wg_url = 'https://app.adjust.com/nx8evof';
+	var wg_text = 'The best wild west theme SLG game!';
+	var wg_stars = '4.2';
+	var wg_ratings = '40.6k';
+
+	// Wordscapes
+	var ws_title = 'Wordscapes';
+	var ws_url = 'https://app.adjust.com/3hr5h0q';
+	var ws_text = '10 minutes a day sharpens your mind!';
+	var ws_stars = '4.5';
+	var ws_ratings = '624.3k';
+	
+	// Word Stacks
+	var wx_title = 'Word Stacks';
+	var wx_url = 'https://app.adjust.com/sn91tnt';
+	var wx_text = 'Word find and search game from the makers of Wordscapes';
+	var wx_stars = '4.7';
+	var wx_ratings = '177k';
+
+	// Wordscapes Search
+	var sr_title = 'Wordscapes Search';
+	var sr_url = 'https://app.adjust.com/lvt0rsh';
+	var sr_text = 'Connect letters to find every word!';
+	var sr_stars = '4.5';
+	var sr_ratings = '63k';
+
+	// Wort Guru
+	var wcde_title = 'Wort Guru';
+	var wcde_url = 'https://app.adjust.com/e62pke2';
+	var wcde_text = 'Lade Dir noch heute Wort Guru runter um Dein Gehirn zu TRAINIEREN!';
+	var wcde_stars = '4.5';
+	var wcde_ratings = '321k';
+
+	// Yes, that dress!
+	var ytd_title = 'Yes, that dress!';
+	var ytd_url = 'https://app.adjust.com/ckxyfe3';
+	var ytd_text = 'Style and design unique outfits! Can you make the cut?';
+	var ytd_stars = '4.5';
+	var ytd_ratings = '56k';
+		
+	
+	
+	
+	// game pod creator function
+	function createGamePod(shortcode)
+	{
+	if (shortcode != '' && shortcode != 'undefined') {
+
+	var title = window[shortcode + '_title'];
+	var url = window[shortcode + '_url'] + '?campaign=' + c1 + '&adgroup=' + c2;
+	var text = window[shortcode + '_text'];
+	var stars = window[shortcode + '_stars'];
+	var ratings = window[shortcode + '_ratings'];
+
+	if (stars > 4.75) {
+	var stars_img_base = '5_0';
+	} else if (stars > 4.25) {
+	var stars_img_base = '4_5';
+	} else if (stars > 3.75) {
+	var stars_img_base = '4_0';
+	} else if (stars > 3.25) {
+	var stars_img_base = '3_5';
+	} else if (stars > 2.75) {
+	var stars_img_base = '3_0';
+	} else if (stars > 2.25) {
+	var stars_img_base = '2_5';
+	} else if (stars > 1.75) {
+	var stars_img_base = '2_0';
+	} else if (stars > 1.25) {
+	var stars_img_base = '1_5';
+	} else if (stars > 0.75) {
+	var stars_img_base = '1_0';
+	} else if (stars > 0.25) {
+	var stars_img_base = '0_5';
+	} else {
+	var stars_img_base = '0_0';
+	}
+
+  	document.write(
+'<!-- ' + shortcode + ' -->'+
+'  <div class="offer-pod">'+
+'  	<a href="' + url + '"><img src="' + shortcode + '-cover-image.jpg" class="app-banner" alt="' + title + '" loading=lazy /></a>'+
+'    <div class="app-info">'+
+'      <div class="app-icon-cell">'+
+'		<a href="' + url + '">'+
+'		<img src="' + shortcode + '-icon.jpg" class="app-icon" alt="" loading=lazy />'+
+'		</a></div>'+
+'      <div class="app-details">'+
+'        <h2>' + title + '</h2>'+
+'        <p>' + text + '</p>'+
+'        <p class="app-ratings">'+
+'		<span>' + stars + '</span>'+
+'		<img class="stars" src="img/stars-' + stars_img_base + '.svg" alt="' + stars + ' stars" loading=lazy />'+
+'		<span>'+
+'		<em>' + ratings + ' Ratings</em>'+
+'		</span>'+
+'		</p>'+
+'      </div>'+
+'      <a class="app-button" href="' + url + '">GET</a>'+
+'	  </div>'+
+'  </div>'+
+''
+)
+	}
+
+	}
+	
+</script>
+<div id="offer-wall">
+  <h1>Check out some more&nbsp;games!</h1>
+  
+  <script>
+  
+	createGamePod(g1);
+	createGamePod(g2);
+	createGamePod(g3);
+	createGamePod(g4);
+	createGamePod(g5);
+	createGamePod(g6);
+	createGamePod(g7);
+	createGamePod(g8);
+	createGamePod(g9);
+	createGamePod(g10);
+	createGamePod(g11);
+	createGamePod(g12);
+	createGamePod(g13);
+	createGamePod(g14);
+	createGamePod(g15);
+	createGamePod(g16);
+	createGamePod(g17);
+	createGamePod(g18);
+	createGamePod(g19);
+	createGamePod(g20);
+	createGamePod(g21);
+  
+  </script>
+
+</div>
+<div id="loader-wrap">
+  <svg id="dot-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.757 36.757">
+    <g id="dot-open-inner">
+      <circle cx="18.379" cy="18.378" r="16.649" style="fill:#fff"></circle>
+      <path d="M18.378,3.459A14.919,14.919,0,1,1,3.459,18.378,14.936,14.936,0,0,1,18.378,3.459m0-3.459A18.379,18.379,0,1,0,36.757,18.378,18.378,18.378,0,0,0,18.378,0Z" style="fill:#0599c5"></path>
+    </g>
+  </svg>
+  <svg id="dot-solid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.757 36.757">
+    <g id="dot-solid-inner">
+      <circle cx="18.378" cy="18.378" r="18.378" style="fill:#0599c5"></circle>
+    </g>
+  </svg>
+</div>
+
+<script>
+// as soon as base page loads, redirect
+window.onload = function() {
+  window.location = clickurl;
+};
+</script>
+
+
+</body></html>
